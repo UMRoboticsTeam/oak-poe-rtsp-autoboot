@@ -1,0 +1,12 @@
+[Unit]
+Description=DepthAI RTSP Stream
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 [PATH-TO-MAIN.PY]
+Restart=always
+User=[USERNAME]
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target
